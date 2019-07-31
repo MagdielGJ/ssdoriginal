@@ -264,7 +264,8 @@ def main():
                 result, loss_batch, _ = sess.run([net.result, net.losses,
                                                   net.optimizer],
                                                  feed_dict=feed)
-
+                print('loss batch:',loss_batch)
+    
                 if math.isnan(loss_batch['confidence']):
                     print('[!] Confidence loss is NaN.')
 
